@@ -1,0 +1,20 @@
+{
+  "name": "app",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Carlos Mercado R.",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "cloudinary": "^1.8.0",
+    "express": "^4.15.2",
+    "express-fileupload": "^0.1.2",
+    "express-formidable": "^1.0.0",
+    "jade": "^1.11.0",
+    "mongoose": "^4.9.6"
+  }
+}

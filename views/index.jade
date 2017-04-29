@@ -1,0 +1,64 @@
+doctype
+html
+	head
+		title mi primera pagina en node
+		link(href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'  rel="stylesheet")
+		link(href='./css/style.css' rel="stylesheet" )
+
+	body
+		nav.menu
+			ul
+				li 
+					a Inicio
+				li 
+					a productos
+				li 
+					a about
+				li 
+					a contacto
+		header
+			.container-fluid
+				.row
+					.col-xs-12.col-md-12
+						img.img-responsive(src="/image/profile.png")
+						h1 START BOOTSTRAP
+						hr
+						h3 Web Developer - Graphic Artist - User Experience Designer
+
+		section.bg
+			.container-fluid
+				.row
+					.col-xs-12.col-md-12
+						h2 	About
+						hr
+						p Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional LESS stylesheets for easy customization.
+
+						p Whether you're a student looking to showcase your work, a professional looking to attract clients, or a graphic artist looking to share your projects, this template is the perfect starting point!
+
+		section.contact
+			.container-fluid
+				.row
+					.col-xs-12.col-md-12
+						h2.mora contact
+						hr.hrMora
+					.col-xs-12.col-md-12
+						form
+							label Nombre
+							input.form-control(type="text" name="nombre" placeholder="introduce tu nombre")
+							label Correo
+							input.form-control(type="text" name="mail" placeholder="introduce tu correo")
+							label Telefono
+							input.form-control(type="text" name="telefono" placeholder="introduce tu telefono")
+							label Mensaje
+							textarea.form-control(name="mensaje" placeholder="introduce tu mensaje")
+							br
+							input.form-control(type="submit" value="Enviar" class="btn-personalizado")
+		section
+			.container-fluid
+				.row
+					each item in producto
+						.col-xs-12.col-md-3
+							img.img-responsive(src="#{item.img}")
+							h3.text-center #{item.name}
+							h4.text-center #{item.price}
+							p.text-center #{item.description}

@@ -1,0 +1,30 @@
+doctype
+html
+	head
+		title Admin
+		link(href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'  rel="stylesheet")
+		link(href='./css/style.css' rel="stylesheet" )
+
+	body
+		section.contact
+			.container-fluid
+				.row
+					.col-xs-12.col-md-12
+						h2.mora Admin
+						hr.hrMora
+					.col-xs-12.col-md-12
+						form(action="/create" method="POST" enctype="multipart/form-data")
+							label Nombre
+							input.form-control(type="text" name="prodName" placeholder="introduce tu nombre")
+
+							label Precio
+							input.form-control(type="number" name="price" placeholder="introduce el precio")
+
+							label Imagen
+							input.form-control(type="file" name="fileimage" placeholder="introduce la imagen")
+
+							label Descripcion
+							textarea.form-control(name="description" placeholder="introduce la introduccion")
+								
+							br
+							input.form-control(type="submit" value="Enviar" class="btn-personalizado")
